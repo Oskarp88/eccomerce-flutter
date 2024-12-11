@@ -11,4 +11,8 @@ class TImage {
   static const String onboardingImageSearching = 'assets/images/on_boarding_images/searching.gif';
   static const String onboardingImageShopping = 'assets/images/on_boarding_images/shopping.gif';
   static const String onboardingImageDelivery = 'assets/images/on_boarding_images/delivery.gif';
+
+  static const String verifyEmailImage = 'assets/images/anim/verifyEmail.png';
+  static const String successImage = 'assets/images/anim/succes.png';
+  
 }

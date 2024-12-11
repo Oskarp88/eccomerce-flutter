@@ -1,6 +1,6 @@
 import 'package:eccomerce_flutter/common/styles/spacing_styles.dart';
-import 'package:eccomerce_flutter/common/widgets_login_signup/form_divider.dart';
-import 'package:eccomerce_flutter/common/widgets_login_signup/social_buttons.dart';
+import 'package:eccomerce_flutter/common/widgets/login_signup/form_divider.dart';
+import 'package:eccomerce_flutter/common/widgets/login_signup/social_buttons.dart';
 import 'package:eccomerce_flutter/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:eccomerce_flutter/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:eccomerce_flutter/utils/constants/sizes.dart';
