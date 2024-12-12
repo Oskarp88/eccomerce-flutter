@@ -14,5 +14,6 @@ class TImage {
 
   static const String verifyEmailImage = 'assets/images/anim/verifyEmail.png';
   static const String successImage = 'assets/images/anim/succes.png';
-  
+  static const String sendEmailImage = 'assets/images/anim/sendEmail.png';
+
 }

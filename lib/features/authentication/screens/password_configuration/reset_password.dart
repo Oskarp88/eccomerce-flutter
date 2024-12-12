@@ -1,40 +1,44 @@
-import 'package:eccomerce_flutter/common/styles/spacing_styles.dart';
+
 import 'package:eccomerce_flutter/utils/constants/sizes.dart';
+import 'package:eccomerce_flutter/utils/constants/string_image.dart';
 import 'package:eccomerce_flutter/utils/helpers/helper_funtions.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-
-class SuccessScreen extends StatelessWidget {
-  final String image, title, sutTitle;
-  final VoidCallback onPressed;
-  const SuccessScreen({super.key,
-    required this.image,
-    required this.sutTitle,
-    required this.title,
-    required this.onPressed
-  });
+class ResetPassword extends StatelessWidget {
+  const ResetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            onPressed: ()=> Get.back(), 
+            icon: const Icon(CupertinoIcons.clear)
+          )
+        ],
+      ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: TSpacingStyle.paddingWithAppBarHeight * 2,
+          padding: const EdgeInsets.all(Sizes.defaultSpace),
           child: Column(
             children: [
               Image(
-                image: AssetImage(image),
+                image: const AssetImage(TImage.sendEmailImage),
                 width: THelperFuntions.screenWidth()*0.6,
               ),
               const SizedBox(height: Sizes.spaceBtwSections,),
               Text(
-                 title, 
+                 'Password Reset Email Sent', 
                  style: Theme.of(context).textTheme.headlineMedium,
                  textAlign: TextAlign.center,
               ),
               const SizedBox(height: Sizes.spaceBtwItems,),
                 Text(
-                  sutTitle,
+                  'uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu',
                   style: Theme.of(context).textTheme.labelMedium,
                   textAlign: TextAlign.center,
                 ),
@@ -44,11 +48,18 @@ class SuccessScreen extends StatelessWidget {
                 SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: onPressed, 
-                  child: const Text('Continue')
+                  onPressed: (){}, 
+                  child: const Text('Done')
                 ),
                ),
-
+                const SizedBox(height: Sizes.spaceBtwItems),
+              SizedBox(
+                width: double.infinity,
+                child: TextButton(
+                  onPressed: ()=> Get.off(()=> const ResetPassword()),
+                  child: const Text('Resend Email')
+                ),
+              ),
             ],
           ),
         ),
