@@ -15,5 +15,11 @@ class TImage {
   static const String verifyEmailImage = 'assets/images/anim/verifyEmail.png';
   static const String successImage = 'assets/images/anim/succes.png';
   static const String sendEmailImage = 'assets/images/anim/sendEmail.png';
+  static const String zapatosImage = 'assets/images/anim/zapatos.png';
+
+  static const String zapatosProductImage = 'assets/images/products/zapatos.png';
+  static const String bannersImage1 = 'assets/images/banners/banners1.png';
+  static const String bannersImage2 = 'assets/images/banners/banners2.png';
+  static const String bannersImage3 = 'assets/images/banners/banners3.png';
 
 }

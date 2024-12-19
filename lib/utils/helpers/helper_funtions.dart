@@ -33,6 +33,7 @@ class THelperFuntions {
     }else if(value == 'Indigo'){
       return Colors.indigo;
     }
+    return null;
    }
 
    static void  showSnackBar(String message){

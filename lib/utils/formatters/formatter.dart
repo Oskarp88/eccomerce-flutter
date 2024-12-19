@@ -13,37 +13,52 @@ class Formatter {
   static String formatPhoneNumber(String phoneNumber){
     if(phoneNumber.length == 10){
       return '(${phoneNumber.substring(0,3)}) ${phoneNumber.substring(3,6)} ${phoneNumber.substring(6)}';
-    }else if{
+    }else if(phoneNumber.length == 11){
       return '(${phoneNumber.substring(0,4)}) ${phoneNumber.substring(4,7)} ${phoneNumber.substring(7)}';
     }
 
     return phoneNumber;
   }
  
-  static String internationFormatPhoneNumber(String phoneNumber){
-    var digitsOnly = phoneNumber.replaceAll(RegExp(r'\D'), '');
-    
-    String countryCode = '+${digitsOnly.substring(0,2)}';
-    digitsOnly = digitsOnly.substring(2);
+  static String internationFormatPhoneNumber(String phoneNumber) {
+  var digitsOnly = phoneNumber.replaceAll(RegExp(r'\D'), ''); // Elimina caracteres no numéricos
+  
+  String countryCode = '+${digitsOnly.substring(0, 2)}'; // Obtiene el código del país
+  digitsOnly = digitsOnly.substring(2); // Elimina el código de país de los dígitos
 
-    final formattedNumber = StringBuffer();
-    formattedNumber.write('($countryCode) ');
+  final formattedNumber = StringBuffer();
+  formattedNumber.write('($countryCode) '); // Agrega el código de país con paréntesis
 
-    int i = 0;
-    while(i < digitsOnly.length){
-      int groupLength= 2;
-      if(i == 0 && countryCode == '+1'){
-        groupLength = 3;
-      }
+  int i = 0;
+  while (i < digitsOnly.length) {
+    int groupLength = 2;
 
-      int end = 1 + groupLength;
-      formattedNumber.write(digitsOnly.substring(i, end));
-    
-      if(end < digitsOnly.length){
-        formattedNumber.write(' ');
-      }
-      i = end;
+    // Para números de EE.UU. o países con código +1, toma los primeros 3 números
+    if (i == 0 && countryCode == '+1') {
+      groupLength = 3;
     }
+
+    // Calcula el índice de fin de la subcadena
+    int end = i + groupLength; // <-- Cambiado de "1 + groupLength" a "i + groupLength"
+
+    // Evita errores si 'end' excede la longitud de 'digitsOnly'
+    if (end > digitsOnly.length) {
+      end = digitsOnly.length;
+    }
+
+    // Extrae la subcadena de los dígitos
+    formattedNumber.write(digitsOnly.substring(i, end));
+
+    // Agrega un espacio si aún hay más números
+    if (end < digitsOnly.length) {
+      formattedNumber.write(' ');
+    }
+
+    // Avanza al siguiente grupo
+    i = end; // <-- Ahora 'i' se incrementa correctamente
   }
+
+  return formattedNumber.toString(); // <-- Retorna el resultado final
+}
 
 }
