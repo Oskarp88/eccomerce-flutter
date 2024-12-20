@@ -62,6 +62,8 @@ class HomeScreen extends StatelessWidget {
                     TImage.bannersImage3,
                   ],
                  ),
+                 const SizedBox(height: Sizes.spaceBtwSections),
+                 SectionHeading(title: 'Popular Products', onPressed: (){},),
                   ///Popular products
                  const SizedBox(height: Sizes.spaceBtwItems),
                  GridLayout(

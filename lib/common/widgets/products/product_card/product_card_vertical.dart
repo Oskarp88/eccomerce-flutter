@@ -85,30 +85,33 @@ class ProductCardVertical extends StatelessWidget {
                       const SizedBox(width: Sizes.xs),
                       const Icon(Iconsax.verify5, color: TColors.primaryColor, size: Sizes.iconXs)
                     ]
-                  ),
-                   
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const ProductPriceText( price: '35.0'),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(Sizes.cardRadiusMd),
-                            bottomRight: Radius.circular(Sizes.productImageRadius)
-                          )
-                        ),
-                        child: const SizedBox(
-                          width: Sizes.iconLg * 1.2,
-                          height: Sizes.iconLg *1.2,
-                          child: Center(child: Icon(Iconsax.add, color: TColors.white,))
-                        ),
-                      )
-                    ],
-                  )
+                  ),             
                 ],
               ),
+            ),
+            const Spacer(),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: Sizes.sm),
+                  child: ProductPriceText( price: '35.0'),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    color: TColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(Sizes.cardRadiusMd),
+                      bottomRight: Radius.circular(Sizes.productImageRadius)
+                    )
+                  ),
+                  child: const SizedBox(
+                    width: Sizes.iconLg * 1.2,
+                    height: Sizes.iconLg *1.2,
+                    child: Center(child: Icon(Iconsax.add, color: TColors.white,))
+                  ),
+                )
+              ],
             )
           ],
          ),
