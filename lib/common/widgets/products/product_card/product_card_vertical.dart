@@ -2,6 +2,7 @@ import 'package:eccomerce_flutter/common/styles/shadow_style.dart';
 import 'package:eccomerce_flutter/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:eccomerce_flutter/common/widgets/icons/circular_icons.dart';
 import 'package:eccomerce_flutter/common/widgets/images/rounded_image.dart';
+import 'package:eccomerce_flutter/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:eccomerce_flutter/common/widgets/texts/product_price_text.dart';
 import 'package:eccomerce_flutter/common/widgets/texts/product_title_text.dart';
 import 'package:eccomerce_flutter/utils/constants/colors.dart';
@@ -67,25 +68,14 @@ class ProductCardVertical extends StatelessWidget {
             ),
             const SizedBox(height: Sizes.spaceBtwItems/2,),
             /// --- datails
-            Padding(
-              padding: const EdgeInsets.only(left: Sizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: Sizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ProductTitleText(title: 'White nike Air Shoes', smallSize: true,),
-                  const SizedBox(height: Sizes.spaceBtwItems/2,),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: Sizes.xs),
-                      const Icon(Iconsax.verify5, color: TColors.primaryColor, size: Sizes.iconXs)
-                    ]
-                  ),             
+                  ProductTitleText(title: 'White nike Air Shoes', smallSize: true,),
+                  SizedBox(height: Sizes.spaceBtwItems/2,),
+                  BrandTitleTextWithVerifiedIcon(title: 'Nike')            
                 ],
               ),
             ),
