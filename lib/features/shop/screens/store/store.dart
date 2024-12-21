@@ -1,14 +1,16 @@
 
 import 'package:eccomerce_flutter/common/widgets/appbar/appbar.dart';
 import 'package:eccomerce_flutter/common/widgets/appbar/tabbar.dart';
+import 'package:eccomerce_flutter/common/widgets/brands/brand_showcase.dart';
 import 'package:eccomerce_flutter/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:eccomerce_flutter/common/widgets/custom_shapes/container/search_container.dart';
 import 'package:eccomerce_flutter/common/widgets/images/circular_image.dart';
 import 'package:eccomerce_flutter/common/widgets/layouts/grid_layout.dart';
 import 'package:eccomerce_flutter/common/widgets/products/cart/cart_menu_icon.dart';
-import 'package:eccomerce_flutter/common/widgets/store/brand_card.dart';
+import 'package:eccomerce_flutter/common/widgets/brands/brand_card.dart';
 import 'package:eccomerce_flutter/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:eccomerce_flutter/common/widgets/texts/section_headig.dart';
+import 'package:eccomerce_flutter/features/shop/screens/store/widget/category_tab.dart';
 import 'package:eccomerce_flutter/utils/constants/colors.dart';
 import 'package:eccomerce_flutter/utils/constants/enums.dart';
 import 'package:eccomerce_flutter/utils/constants/sizes.dart';
@@ -81,29 +83,13 @@ class StoreScreen extends StatelessWidget {
               )
             ];
           },
-          body:const TabBarView(
+          body: const TabBarView(
             children: [
-              Padding(
-                padding: EdgeInsets.all(Sizes.defaultSpace),
-                child: Column(
-                  children: [
-                    ///brands
-                    RoundedContainer(
-                      showBorder: true,
-                      borderColor: TColors.darkGrey,
-                      backgroundColor: Colors.transparent,
-                      margin: EdgeInsets.only(bottom: Sizes.spaceBtwItems),
-                      child: Column(
-                        children: [
-                          ///brand with products count
-                          BrandCard(showBorder: false),
-                          ///brand top 3 image product
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              )
+              OCategoryTab(),
+              OCategoryTab(),
+              OCategoryTab(),
+              OCategoryTab(),
+              OCategoryTab(),
             ],
           ),
         ),
