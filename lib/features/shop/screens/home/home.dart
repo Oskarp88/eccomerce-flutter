@@ -21,8 +21,7 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const CurvedEdgeWidget(
-            child: PrimaryHeaderContainer(
+            const PrimaryHeaderContainer(
               child: Column(
                 children: [
                   ///appbar
@@ -43,11 +42,11 @@ class HomeScreen extends StatelessWidget {
                         HomeCategories()
                       ],
                     )
-                  )
+                  ),
+                  SizedBox(height: Sizes.spaceBtwSections,)
                 ],
               ),
             ),
-           ),
 
            ///Body 
            Padding(

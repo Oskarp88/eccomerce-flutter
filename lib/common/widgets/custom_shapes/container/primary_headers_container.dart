@@ -1,4 +1,5 @@
 import 'package:eccomerce_flutter/common/widgets/custom_shapes/container/circular_container.dart';
+import 'package:eccomerce_flutter/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:eccomerce_flutter/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -10,11 +11,10 @@ class PrimaryHeaderContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: TColors.primaryColor,
-      padding: const EdgeInsets.all(0),
-      child: SizedBox(
-        height: 400,
+    return CurvedEdgeWidget(
+      child: Container(
+        color: TColors.primaryColor,
+        padding: const EdgeInsets.all(0),
         child: Stack(
           children: [
             Positioned(

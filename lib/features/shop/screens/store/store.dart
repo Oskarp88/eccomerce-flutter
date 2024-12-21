@@ -1,20 +1,14 @@
 
 import 'package:eccomerce_flutter/common/widgets/appbar/appbar.dart';
 import 'package:eccomerce_flutter/common/widgets/appbar/tabbar.dart';
-import 'package:eccomerce_flutter/common/widgets/brands/brand_showcase.dart';
-import 'package:eccomerce_flutter/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:eccomerce_flutter/common/widgets/custom_shapes/container/search_container.dart';
-import 'package:eccomerce_flutter/common/widgets/images/circular_image.dart';
 import 'package:eccomerce_flutter/common/widgets/layouts/grid_layout.dart';
 import 'package:eccomerce_flutter/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:eccomerce_flutter/common/widgets/brands/brand_card.dart';
-import 'package:eccomerce_flutter/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:eccomerce_flutter/common/widgets/texts/section_headig.dart';
 import 'package:eccomerce_flutter/features/shop/screens/store/widget/category_tab.dart';
 import 'package:eccomerce_flutter/utils/constants/colors.dart';
-import 'package:eccomerce_flutter/utils/constants/enums.dart';
 import 'package:eccomerce_flutter/utils/constants/sizes.dart';
-import 'package:eccomerce_flutter/utils/constants/string_image.dart';
 import 'package:eccomerce_flutter/utils/helpers/helper_funtions.dart';
 import 'package:flutter/material.dart';
 

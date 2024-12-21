@@ -17,6 +17,8 @@ class TImage {
   static const String sendEmailImage = 'assets/images/anim/sendEmail.png';
   static const String zapatosImage = 'assets/images/anim/zapatos.png';
 
+  static const String userImagen = 'assets/images/user/user.png';
+
   static const String zapatosProductImage = 'assets/images/products/zapatos.png';
   static const String clothIcon = 'assets/images/products/cloth.png';
   static const String bannersImage1 = 'assets/images/banners/banners1.png';
