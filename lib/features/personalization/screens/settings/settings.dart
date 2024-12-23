@@ -3,9 +3,11 @@ import 'package:eccomerce_flutter/common/widgets/custom_shapes/container/primary
 import 'package:eccomerce_flutter/common/widgets/list_title/settings_menu_title.dart';
 import 'package:eccomerce_flutter/common/widgets/list_title/user_profile_title.dart';
 import 'package:eccomerce_flutter/common/widgets/texts/section_headig.dart';
+import 'package:eccomerce_flutter/features/personalization/screens/profile/profile.dart';
 import 'package:eccomerce_flutter/utils/constants/colors.dart';
 import 'package:eccomerce_flutter/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -30,7 +32,7 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 
                   ///user profile card
-                 const OUserProfileTilte(),                 
+                 OUserProfileTilte(onPressed: () => Get.to(() => const ProfileScreen()),),                 
                  const SizedBox(height: Sizes.spaceBtwSections,),
 
                 ],
