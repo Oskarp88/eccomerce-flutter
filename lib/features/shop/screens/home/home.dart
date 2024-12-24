@@ -1,7 +1,6 @@
 
 import 'package:eccomerce_flutter/common/widgets/custom_shapes/container/primary_headers_container.dart';
 import 'package:eccomerce_flutter/common/widgets/custom_shapes/container/search_container.dart';
-import 'package:eccomerce_flutter/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:eccomerce_flutter/common/widgets/layouts/grid_layout.dart';
 import 'package:eccomerce_flutter/common/widgets/products/product_card/product_card_vertical.dart';
 import 'package:eccomerce_flutter/common/widgets/texts/section_headig.dart';
